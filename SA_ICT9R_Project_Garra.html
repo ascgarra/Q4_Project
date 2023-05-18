@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  <style>
+     body {
+         font-family: Muli, sans-serif;
+         font-size: 16px;
+         background-color: #C3E8F9;
+         background-repeat: no-repeat;
+    }
+
+       h1 {
+         font-family: "Space Mono", monospace;
+         font-size: 46px;
+         text-align: center;
+    }
+
+    p{
+      text-align: center;
+      font-family: 'Comfortaa';font-size: 25px;
+    }
+
+.button {
+  box-align: center;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+select {
+  width: 50%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+h1{
+  text-align: center;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+form{
+      text-align: center;
+      font-size: 25px;
+
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+</style>
+</head>
+<body>
+
+</head>
+<body>
+  <h1>Unit Converter📏</h1>
+<br>
+<form>
+  <label>milimeter:</label>
+  <input id="inputMilimeter" type="number" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</form>
+<form><br>centimeter: <span id="outputCentimeter"></span></form><br>
+<form><br>meter: <span id="outputMeter"></span></form><br>
+<form><br>kilometer: <span id="outputKilometer"></span></form><br>
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputCentimeter").innerHTML=valNum*0.1;
+  document.getElementById("outputMeter").innerHTML=valNum*0.001;
+  document.getElementById("outputKilometer").innerHTML=valNum*0.000001;
+}
+</script>
+</body>
+</html>
